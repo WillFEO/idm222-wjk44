@@ -1,0 +1,67 @@
+/* ============= GLOBAL COLOR AND OTHER VARIABLES ============= */
+:root {
+  /* COLORS */
+  --color-warm-off-white: #fffcf4;
+  --color-cool-off-white: #e6eced;
+  --color-off-black: #0f0f0f;
+  --color-dark-grey: #1a1f28;
+  --color-mid-blue-lightmode: #307ad2;
+  --color-mid-blue-darkmode: #4c91e9;
+  --color-light-blue-lightmode: #4f91d7;
+  --color-light-blue-darkmode: #66a0e3;
+  --color-green-lightmode: #5a9d37;
+  --color-green-darkmode: #5bc755;
+  --color-grey-lightmode: #7c8493;
+  --color-grey-darkmode: #9ca3af;
+
+  --color-background-lightmode: var(--color-warm-off-white);
+  --color-background-darkmode: var(--color-dark-grey);
+  --color-light-text: var(--color-cool-off-white);
+  --color-dark-text: var(--color-off-black);
+  --color-accent-1-lightmode: var(--color-mid-blue-lightmode);
+  --color-accent-1-darkmode: var(--color-mid-blue-darkmode);
+  --color-accent-1light-lightmode: var(--color-light-blue-lightmode);
+  --color-accent-1light-darkmode: var(--color-light-blue-darkmode);
+  --color-accent-2-lightmode: var(--color-green-lightmode);
+  --color-accent-2-darkmode: var(--color-green-darkmode);
+  --color-accent-3-lightmode: var(--color-grey-lightmode);
+  --color-accent-3-darkmode: var(--color-grey-darkmode);
+
+  /* FONT FAMILIES */
+  --font-family-body: "Manrope", sans-serif;
+  --font-family-headings: "Montserrat Alternates", sans-serif;
+
+  /* FONT SIZES*/
+  --font-xxsmall: 0.5rem;
+  --font-xsmall: 0.75rem;
+  --font-small: 0.875rem;
+  --font-med: 1.125rem;
+  --font-lrg: 1.25rem;
+  --font-xlrg: 1.5rem;
+  --font-xxlrg: 2rem;
+  --font-xxxlrg: 2.5rem;
+
+  /* SPACING SYSTEM*/
+  --space-xsmall: 0.25rem;
+  --space-small: 0.5rem;
+  --space-med: 0.75rem;
+  --space-lrg: 1rem;
+  --space-xlrg: 2rem;
+  --space-xxlrg: 2.5rem;
+  --space-hero: 8rem; /* for #hero section */
+
+  /* BORDER RADIUS (rounded corners) */
+  --radius-small: 0.25rem;
+  --radius-med: 0.5rem;
+  --radius-lrg: 0.75rem;
+  --radius-xlrg: 1rem;
+
+  /* BORDER WIDTHS */
+  --border-thin: 1px;
+  --border-medium: 2px;
+  --border-thick: 3px;
+
+  /* COMPONENT SIZING */
+  --width-nav-min: 128px;
+  --width-hamburger-min: 200px;
+}
