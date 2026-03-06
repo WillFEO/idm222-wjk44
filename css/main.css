@@ -1,4 +1,22 @@
-/* ============= GLOBAL COLOR AND OTHER VARIABLES ============= */
+/**/
+/**/
+/**/
+/**/
+/* ============= TABLE OF CONTENTS ============= */
+/* 01. CSS VARIABLES (COLORS, SPACING, SIZING) */
+/* 02. FONT FACES */
+/* 03. BASE STYLES (BODY, MAIN, LAYOUT) */
+/* 04. TYPOGRAPHY (HEADINGS, TEXT, LABELS) */
+/* 05. BUTTONS AND INTERACTIVE ELEMENTS */
+/* 06. HOME PAGE ELEMENTS */
+/* 07. GEAR PAGE ELEMENTS */
+/* 08. DIFFICULTY PAGE ELEMENTS */
+/* 09. LOCATIONS PAGE ELEMENTS */
+/* 10. ANECDOTE PAGE ELEMENTS */
+/* 11. LAYOUT HELPERS */
+/**/
+
+/* ============= CSS VARIABLES (COLORS, SPACING, SIZING) ============= */
 :root {
   /* COLORS */
   --color-warm-off-white: #fffcf4;
@@ -28,40 +46,72 @@
   --color-accent-3-darkmode: var(--color-grey-darkmode);
 
   /* FONT FAMILIES */
-  --font-family-body: "Manrope", sans-serif;
+  --font-family-body: "Aleo", sans-serif;
   --font-family-headings: "Montserrat Alternates", sans-serif;
 
   /* FONT SIZES*/
-  --font-xxsmall: 0.5rem;
-  --font-xsmall: 0.75rem;
-  --font-small: 0.875rem;
-  --font-med: 1.125rem;
+  --font-xsm: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-med: 1rem;
   --font-lrg: 1.25rem;
   --font-xlrg: 1.5rem;
-  --font-xxlrg: 2rem;
-  --font-xxxlrg: 2.5rem;
+  --font-2xlrg: 2rem;
+  --font-3xlrg: 2.5rem;
 
   /* SPACING SYSTEM*/
-  --space-xsmall: 0.25rem;
-  --space-small: 0.5rem;
-  --space-med: 0.75rem;
-  --space-lrg: 1rem;
+  --space-2xsm: 0.25rem;
+  --space-xsm: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-med: 1rem;
+  --space-lrg: 1.5rem;
   --space-xlrg: 2rem;
-  --space-xxlrg: 2.5rem;
-  --space-hero: 8rem; /* for #hero section */
+  --space-2xlrg: 3rem;
+  --space-section: 6rem;
 
   /* BORDER RADIUS (rounded corners) */
-  --radius-small: 0.25rem;
+  --radius-sm: 0.25rem;
   --radius-med: 0.5rem;
   --radius-lrg: 0.75rem;
   --radius-xlrg: 1rem;
 
   /* BORDER WIDTHS */
   --border-thin: 1px;
-  --border-medium: 2px;
+  --border-med: 2px;
   --border-thick: 3px;
 
   /* COMPONENT SIZING */
   --width-nav-min: 128px;
   --width-hamburger-min: 200px;
 }
+
+/* ============= FONT FACES ============= */
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/Aleo/Aleo-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+}
+
+/* ============= BASE STYLES (BODY, MAIN, LAYOUT) ============= */
+
+/* ============= TYPOGRAPHY (HEADINGS, TEXT, LABELS) ============= */
+
+/* ============= BUTTONS AND INTERACTIVE ELEMENTS ============= */
+
+/* ============= HOME PAGE ELEMENTS ============= */
+
+/* ============= GEAR PAGE ELEMENTS ============= */
+
+/* ============= DIFFICULTY PAGE ELEMENTS ============= */
+
+/* ============= LOCATIONS PAGE ELEMENTS ============= */
+
+/* ============= ANECDOTE PAGE ELEMENTS ============= */
+
+/* ============= LAYOUT HELPERS ============= */
