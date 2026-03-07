@@ -8,13 +8,14 @@
 /* 03. BASE STYLES (BODY, MAIN, LAYOUT) */
 /* 04. TYPOGRAPHY (HEADINGS, TEXT, LABELS) */
 /* 05. BUTTONS AND INTERACTIVE ELEMENTS */
-/* 06. HOME PAGE ELEMENTS */
-/* 07. GEAR PAGE ELEMENTS */
-/* 08. DIFFICULTY PAGE ELEMENTS */
-/* 09. LOCATIONS PAGE ELEMENTS */
-/* 10. ANECDOTE PAGE ELEMENTS */
-/* 11. HELPERS */
-/* 12. JS STATES */
+/* 06. HEADER AND FOOTER */
+/* 07. HOME PAGE ELEMENTS */
+/* 08. GEAR PAGE ELEMENTS */
+/* 09. DIFFICULTY PAGE ELEMENTS */
+/* 10. LOCATIONS PAGE ELEMENTS */
+/* 11. ANECDOTE PAGE ELEMENTS */
+/* 12. HELPERS */
+/* 13. JS STATES */
 /**/
 
 /* ============= CSS VARIABLES (COLORS, SPACING, SIZING) ============= */
@@ -79,7 +80,10 @@
   --layout-max-width: 80vw;
   --width-nav-min: 128px;
   --width-hamburger-min: 200px;
-  --learn-more__tile-min-height: 200px;
+  --hero-height-mobile: 570px;
+  --hero-height-tablet: 620px;
+  --hero-height-desktop: 700px;
+  --learn-more__tile-min-height: 280px;
 }
 
 /* ============= FONT FACES ============= */
@@ -97,9 +101,17 @@
 }
 
 /* ============= BASE STYLES (BODY, MAIN, LAYOUT) ============= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+
+  overflow-x: hidden;
 
   background-color: var(--color-background);
 
@@ -174,13 +186,72 @@ p {
 
 /* ============= BUTTONS AND INTERACTIVE ELEMENTS ============= */
 
+/* ============= HEADER AND FOOTER ============= */
+
 /* ============= HOME PAGE ELEMENTS ============= */
+
+/* Hero Section */
+.hero {
+  position: relative;
+
+  background-image: url(../images/index/hero-mobile.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  min-height: var(--hero-height-mobile);
+
+  display: flex;
+  justify-content: center;
+
+  padding: var(--space-xlrg) var(--space-med);
+}
+
+.hero__text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  h1,
+  h3 {
+    color: var(--color-text-secondary);
+  }
+
+  h1 {
+    margin-bottom: var(--space-sm);
+  }
+}
+
+/* Introduction Images */
+.introduction-home__text {
+  margin-bottom: var(--space-xlrg);
+}
+
+.introduction-home__images {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: var(--space-med);
+}
+
+.introduction-home__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.introduction-home__image--tall {
+  grid-row: span 2;
+}
+
+.introduction-home__image--square {
+  aspect-ratio: 1 / 1;
+}
 
 /* Learn More Tiles */
 .learn-more__grid {
   display: grid;
   grid-template-rows: repeat(4, auto);
-  gap: var(--space-med);
+  gap: var(--space-xlrg);
 }
 
 .learn-more__tile {
@@ -189,6 +260,18 @@ p {
   border-style: solid;
   border-width: var(--border-med);
   min-height: var(--learn-more__tile-min-height);
+
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.learn-more__tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 252, 244, 0.6);
 }
 
 .learn-more__tile__text {
@@ -196,9 +279,15 @@ p {
   flex-direction: column;
   justify-content: space-between;
   padding: var(--space-sm);
+  position: relative;
+  z-index: 1;
 
   h3 {
     text-align: left;
+  }
+
+  p {
+    font-weight: 700;
   }
 }
 
@@ -206,6 +295,24 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.learn-more__tile--gear {
+  background-image: url(../images/index/tile-gear-mobile.webp);
+}
+
+.learn-more__tile--difficulty {
+  background-image: url(../images/index/tile-difficulty-mobile.webp);
+}
+
+.learn-more__tile--locations {
+  background-image: url(../images/index/tile-locations-mobile.webp);
+}
+
+.learn-more__tile--anecdote {
+  background-image: url(../images/index/tile-anecdote-mobile.webp);
 }
 
 /* ============= GEAR PAGE ELEMENTS ============= */
@@ -217,6 +324,7 @@ p {
 /* ============= ANECDOTE PAGE ELEMENTS ============= */
 
 /* ============= HELPERS ============= */
+
 .fill-dark-blue {
   background-color: var(--color-accent-1);
 }
