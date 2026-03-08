@@ -562,6 +562,32 @@ footer {
 
 /* ============= LOCATIONS PAGE ELEMENTS ============= */
 
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-section);
+}
+
+.introduction-locations__image,
+.locations__item__image {
+  margin-bottom: var(--space-lrg);
+}
+
+.locations__item h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.introduction-locations__image {
+  width: 100%;
+  border-width: var(--border-thick);
+  border-style: solid;
+}
+.locations__item__image {
+  width: 100%;
+  border-width: var(--border-med);
+  border-style: solid;
+}
+
 /* ============= ANECDOTE PAGE ELEMENTS ============= */
 
 /* ============= HELPERS ============= */
