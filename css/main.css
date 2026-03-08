@@ -172,6 +172,25 @@ p {
   margin-bottom: 0;
 }
 
+.header__brand__logo,
+.footer__brand__logo {
+  font-size: var(--font-2xlrg);
+  line-height: 1.25;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.header__brand__logo,
+.footer__nav__link {
+  white-space: nowrap;
+}
+
+.footer__nav__link,
+.header__nav__link {
+  font-weight: 600;
+  font-size: var(--font-lrg);
+}
+
 .underline-green {
   border-bottom: var(--border-med) solid var(--color-accent-2);
 }
@@ -188,11 +207,110 @@ p {
 
 /* ============= HEADER AND FOOTER ============= */
 
+header,
+footer {
+  background-color: var(--color-accent-1);
+
+  a,
+  li,
+  p {
+    color: var(--color-text-secondary);
+  }
+
+  li {
+    text-align: right;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+  padding: var(--space-lrg);
+  position: relative;
+
+  border-bottom: var(--border-thick) solid var(--color-accent-2);
+}
+
+.header__nav__toggle-input {
+  display: none;
+}
+
+.header__nav__toggle-button {
+  cursor: pointer;
+  font-size: var(--font-2xlrg);
+  color: var(--color-text-secondary);
+}
+
+.header__nav__toggle-button::before {
+  content: "☰";
+}
+
+.header__nav__toggle-input:checked + .header__nav__toggle-button::before {
+  content: "✕";
+}
+
+.header__nav__links {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+
+  margin: 0;
+
+  background-color: var(--color-accent-1);
+
+  padding: var(--space-xlrg) var(--space-lrg) var(--space-xlrg)
+    var(--space-2xlrg);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: 0.25s ease;
+}
+
+.header__nav__toggle-input:checked ~ .header__nav__links {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  padding: var(--space-lrg);
+
+  border-top: var(--border-thick) solid var(--color-accent-2);
+}
+
+.footer__nav__links,
+.header__nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-med);
+}
+
 /* ============= HOME PAGE ELEMENTS ============= */
 
 /* Hero Section */
 .hero {
   position: relative;
+  z-index: 100;
 
   background-image: url(../images/index/hero-mobile.webp);
   background-size: cover;
