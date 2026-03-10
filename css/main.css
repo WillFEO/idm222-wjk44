@@ -694,10 +694,24 @@ footer {
   }
 }
 
+.difficulty-scale__level__content {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: var(--space-lrg);
+}
+
 .difficulty-scale__level__image {
   width: 100%;
   border-width: var(--border-med);
   border-style: solid;
+}
+
+@media (min-width: 768px) {
+  .difficulty-scale__level__content {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 /* ============= LOCATIONS PAGE ELEMENTS ============= */
