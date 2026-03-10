@@ -616,12 +616,14 @@ footer {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: var(--space-med);
+
+  height: 100%;
 }
 
 .introduction-home__image--tall {
   grid-column: 2;
   grid-row: 2;
-  align-self: stretch;
+  height: 100%;
 }
 
 .introduction-home__image {

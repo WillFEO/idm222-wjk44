@@ -3,28 +3,29 @@ const darkModeToggle = document.getElementById("dark-mode-toggle");
 const toggleIcon = document.getElementById("toggle-icon");
 const toggleText = document.getElementById("toggle-text");
 
-// Check for saved preference or system preference
-function initializeDarkMode() {
-  const savedMode = localStorage.getItem("darkmode");
-
-  if (savedMode !== null) {
-    // Use saved preference
-    if (savedMode === "enabled") {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
+// Handle toggle click
+darkModeToggle.addEventListener("click", function () {
+  if (document.body.classList.contains("darkmode")) {
+    disableDarkMode();
   } else {
-    // Check system preference
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
+    enableDarkMode();
   }
+});
+
+// Listen for system preference changes
+if (window.matchMedia) {
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      // Only auto-change if user hasn't manually set a preference
+      if (localStorage.getItem("darkmode") === null) {
+        if (e.matches) {
+          enableDarkMode();
+        } else {
+          disableDarkMode();
+        }
+      }
+    });
 }
 
 function enableDarkMode() {
@@ -49,29 +50,28 @@ function updateToggleDisplay() {
   }
 }
 
-// Handle toggle click
-darkModeToggle.addEventListener("click", function () {
-  if (document.body.classList.contains("darkmode")) {
-    disableDarkMode();
-  } else {
-    enableDarkMode();
-  }
-});
+// Check for saved preference or system preference
+function initializeDarkMode() {
+  const savedMode = localStorage.getItem("darkmode");
 
-// Listen for system preference changes
-if (window.matchMedia) {
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      // Only auto-change if user hasn't manually set a preference
-      if (localStorage.getItem("darkmode") === null) {
-        if (e.matches) {
-          enableDarkMode();
-        } else {
-          disableDarkMode();
-        }
-      }
-    });
+  if (savedMode !== null) {
+    // Use saved preference
+    if (savedMode === "enabled") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  } else {
+    // Check system preference
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  }
 }
 
 // Initialize on page load
