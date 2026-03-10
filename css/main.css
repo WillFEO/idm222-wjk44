@@ -137,8 +137,40 @@
 
 @media (min-width: 1200px) {
   :root {
+    /* FONT SIZES*/
+    --font-xsm: 1rem;
+    --font-sm: 1.25rem;
+    --font-med: 1.5rem;
+    --font-lrg: 2rem;
+    --font-xlrg: 2.5rem;
+    --font-2xlrg: 3rem;
+    --font-3xlrg: 4rem;
+    --font-line-height: 1.5;
+
+    /* HEADING SIZES*/
+    --heading-3: 2.5rem;
+    --heading-2: 3.5rem;
+    --heading-1: 4rem;
+    --heading-line-height: 1.25;
+
+    /* SPACING SYSTEM*/
+    --space-2xsm: 0.75rem;
+    --space-xsm: 1rem;
+    --space-sm: 1.5rem;
+    --space-med: 2rem;
+    --space-lrg: 3rem;
+    --space-xlrg: 4rem;
+    --space-2xlrg: 5rem;
+    --space-section: 8rem;
+
+    /* BORDER RADIUS (rounded corners) */
+
+    /* BORDER WIDTHS */
+
+    /* COMPONENT SIZING */
     --layout-width: 60vw;
     --layout-max-width: 1000px;
+    --learn-more__tile-min-height: 400px;
   }
 }
 
@@ -185,6 +217,10 @@ section {
 }
 
 /* ============= TYPOGRAPHY (HEADINGS, TEXT, LABELS) ============= */
+p {
+  max-width: 700px;
+}
+
 p,
 a,
 label {
@@ -449,7 +485,7 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr auto;
-    gap: var(--space-2xlrg);
+    gap: var(--space-xlrg);
   }
 
   .introduction-home__text {
@@ -556,6 +592,11 @@ footer {
 }
 
 /* ============= GEAR PAGE ELEMENTS ============= */
+.introduction-gear {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .gear-list {
   display: flex;
@@ -640,7 +681,18 @@ footer {
   }
 }
 
+@media (min-width: 1200px) {
+  .gear-list__item {
+    gap: var(--space-med);
+  }
+}
+
 /* ============= DIFFICULTY PAGE ELEMENTS ============= */
+.introduction-difficulty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .difficulty-scale {
   display: flex;
@@ -714,6 +766,20 @@ footer {
   }
 }
 
+@media (min-width: 1200px) {
+  .difficulty-scale__level {
+    gap: var(--space-med);
+  }
+
+  .difficulty-scale__level__heading__letter-tile {
+    padding: var(--space-2xsm) var(--space-xsm);
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+}
+
 /* ============= LOCATIONS PAGE ELEMENTS ============= */
 
 .locations {
@@ -765,6 +831,13 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--space-xlrg);
+  align-items: center;
+}
+
+.introduction-anecdote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .anecdote__section {
@@ -774,9 +847,9 @@ footer {
 }
 
 .introduction-anecdote {
-  padding-bottom: var(--space-lrg);
+  padding-bottom: var(--space-xlrg);
   border-bottom: var(--border-med) solid var(--color-accent-3-light);
-  margin-bottom: var(--space-lrg);
+  margin-bottom: var(--space-xlrg);
 }
 
 .introduction-anecdote__image,
