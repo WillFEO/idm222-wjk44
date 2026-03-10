@@ -220,10 +220,6 @@ section {
 }
 
 /* ============= TYPOGRAPHY (HEADINGS, TEXT, LABELS) ============= */
-p {
-  max-width: 700px;
-}
-
 p,
 a,
 label {
@@ -233,6 +229,14 @@ label {
   line-height: var(--font-line-height);
 
   color: var(--color-text-primary);
+}
+
+p {
+  max-width: 700px;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -454,7 +458,7 @@ footer {
 .hero__text {
   max-width: var(--hero-text-maxwidth);
 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 
   h1,
   h3 {
@@ -478,6 +482,10 @@ footer {
 
 .introduction-home__text {
   grid-column: 1 / span 2;
+
+  p {
+    max-width: none;
+  }
 }
 
 .introduction-home__square-images {
@@ -506,7 +514,7 @@ footer {
   aspect-ratio: 1 / 1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .introduction-home__content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -613,6 +621,14 @@ footer {
   .learn-more__tile__text {
     p {
       font-size: var(--font-sm);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .learn-more__tile__text {
+    p {
+      font-size: var(--font-med);
     }
   }
 }
