@@ -2,56 +2,73 @@
 /**/
 /**/
 /**/
-/* ============= TABLE OF CONTENTS ============= */
+/* ================================= */
+/* TABLE OF CONTENTS */
+/* ================================= */
 /* 01. CSS VARIABLES (COLORS, SPACING, SIZING) */
 /* 02. FONT FACES */
-/* 03. BASE STYLES (BODY, MAIN, LAYOUT) */
-/* 04. TYPOGRAPHY (HEADINGS, TEXT, LABELS) */
-/* 05. BUTTONS AND INTERACTIVE ELEMENTS */
-/* 06. HEADER AND FOOTER */
-/* 07. HOME PAGE ELEMENTS */
-/* 08. GEAR PAGE ELEMENTS */
-/* 09. DIFFICULTY PAGE ELEMENTS */
-/* 10. LOCATIONS PAGE ELEMENTS */
-/* 11. ANECDOTE PAGE ELEMENTS */
-/* 12. HELPERS */
-/* 13. JS STATES */
+/* 03. UTILITY CLASSES */
+/* 04. BASE STYLES */
+/* 05. TYPOGRAPHY */
+/* 06. HEADER & NAVIGATION */
+/* 07. HOME PAGE: HERO & INTRODUCTION */
+/* 08. HOME PAGE: LEARN MORE SECTION */
+/* 09. GEAR PAGE */
+/* 10. DIFFICULTY PAGE */
+/* 11. LOCATIONS PAGE */
+/* 12. ANECDOTE PAGE */
+/* 13. DARK MODE */
+/* ================================= */
 /**/
 
-/* ============= CSS VARIABLES (COLORS, SPACING, SIZING) ============= */
+/* ================================= */
+/* CSS VARIABLES (COLORS, SPACING, SIZING) */
+/* ================================= */
 :root {
-  /* COLORS */
+  /* ---------- COLORS ---------- */
+
   --color-warm-off-white: #fffcf4;
   --color-cool-off-white: #e6eced;
   --color-off-black: #0f0f0f;
   --color-dark-grey: #1a1f28;
+
   --color-mid-blue-dark: #307ad2;
   --color-mid-blue-light: #4c91e9;
+
   --color-light-blue-dark: #4f91d7;
   --color-light-blue-light: #66a0e3;
+
   --color-green-dark: #5a9d37;
   --color-green-light: #5bc755;
+
   --color-grey-dark: #7c8493;
   --color-grey-light: #9ca3af;
+
   --color-light-grey-dark: #d4d9e4;
   --color-light-grey-light: #cbd1dd;
 
+  /* ---------- SEMANTIC COLORS ---------- */
+
   --color-background: var(--color-warm-off-white);
+
   --text-on-page: var(--color-off-black);
   --text-on-header: var(--color-cool-off-white);
   --text-on-card: var(--color-off-black);
   --text-light: var(--color-cool-off-white);
+
   --color-accent-1: var(--color-mid-blue-dark);
   --color-accent-1-light: var(--color-light-blue-dark);
   --color-accent-2: var(--color-green-dark);
   --color-accent-3: var(--color-grey-dark);
   --color-accent-3-light: var(--color-light-grey-dark);
 
-  /* FONT FAMILIES */
+  /* ---------- FONTS ---------- */
+
   --font-family-body: "Aleo", sans-serif;
   --font-family-headings: "Montserrat", sans-serif;
 
-  /* FONT SIZES*/
+  /* ---------- FONT SIZES ---------- */
+
   --font-xsm: 0.75rem;
   --font-sm: 0.875rem;
   --font-med: 1rem;
@@ -59,15 +76,19 @@
   --font-xlrg: 1.5rem;
   --font-2xlrg: 2rem;
   --font-3xlrg: 2.5rem;
+
   --font-line-height: 1.625;
 
-  /* HEADING SIZES*/
+  /* ---------- HEADING SIZES ---------- */
+
   --heading-3: 1.5rem;
   --heading-2: 2rem;
   --heading-1: 3rem;
+
   --heading-line-height: 1.25;
 
-  /* SPACING SYSTEM*/
+  /* ---------- SPACING SYSTEM ---------- */
+
   --space-2xsm: 0.25rem;
   --space-xsm: 0.5rem;
   --space-sm: 0.75rem;
@@ -77,28 +98,34 @@
   --space-2xlrg: 3rem;
   --space-section: 4.5rem;
 
-  /* BORDER RADIUS (rounded corners) */
+  /* ---------- BORDER RADIUS ---------- */
+
   --radius-sm: 0.25rem;
   --radius-med: 0.5rem;
   --radius-lrg: 0.75rem;
   --radius-xlrg: 1rem;
 
-  /* BORDER WIDTHS */
+  /* ---------- BORDER WIDTH ---------- */
+
   --border-thin: 1px;
   --border-med: 2px;
   --border-thick: 3px;
 
-  /* COMPONENT SIZING */
+  /* ---------- LAYOUT ---------- */
+
   --layout-width: 80vw;
   --layout-max-width: 400px;
+
   --hero-text-maxwidth: 400px;
   --hero-height: 570px;
+
   --learn-more__tile-min-height: 280px;
 }
 
 @media (min-width: 768px) {
   :root {
-    /* FONT SIZES*/
+    /* ---------- FONT SIZES ---------- */
+
     --font-xsm: 0.875rem;
     --font-sm: 1rem;
     --font-med: 1.25rem;
@@ -108,13 +135,15 @@
     --font-3xlrg: 3rem;
     --font-line-height: 1.5;
 
-    /* HEADING SIZES*/
+    /* ---------- HEADING SIZES ---------- */
+
     --heading-3: 2rem;
     --heading-2: 2.75rem;
     --heading-1: 3.5rem;
     --heading-line-height: 1.25;
 
-    /* SPACING SYSTEM*/
+    /* ---------- SPACING SYSTEM ---------- */
+
     --space-2xsm: 0.5rem;
     --space-xsm: 0.75rem;
     --space-sm: 1rem;
@@ -124,11 +153,8 @@
     --space-2xlrg: 4rem;
     --space-section: 6rem;
 
-    /* BORDER RADIUS (rounded corners) */
+    /* ---------- LAYOUT ---------- */
 
-    /* BORDER WIDTHS */
-
-    /* COMPONENT SIZING */
     --layout-width: 75vw;
     --layout-max-width: 700px;
     --hero-text-maxwidth: 600px;
@@ -138,7 +164,8 @@
 
 @media (min-width: 1200px) {
   :root {
-    /* FONT SIZES*/
+    /* ---------- FONT SIZES ---------- */
+
     --font-xsm: 1rem;
     --font-sm: 1.25rem;
     --font-med: 1.5rem;
@@ -148,13 +175,15 @@
     --font-3xlrg: 4rem;
     --font-line-height: 1.5;
 
-    /* HEADING SIZES*/
+    /* ---------- HEADING SIZES ---------- */
+
     --heading-3: 2.5rem;
     --heading-2: 3.5rem;
     --heading-1: 4rem;
     --heading-line-height: 1.25;
 
-    /* SPACING SYSTEM*/
+    /* ---------- SPACING SYSTEM ---------- */
+
     --space-2xsm: 0.75rem;
     --space-xsm: 1rem;
     --space-sm: 1.5rem;
@@ -164,11 +193,8 @@
     --space-2xlrg: 5rem;
     --space-section: 8rem;
 
-    /* BORDER RADIUS (rounded corners) */
+    /* ---------- LAYOUT ---------- */
 
-    /* BORDER WIDTHS */
-
-    /* COMPONENT SIZING */
     --layout-width: 60vw;
     --layout-max-width: 1100px;
     --hero-text-maxwidth: 700px;
@@ -177,7 +203,9 @@
   }
 }
 
-/* ============= FONT FACES ============= */
+/* ================================= */
+/* FONT FACES */
+/* ================================= */
 @font-face {
   font-family: "Aleo";
   src: url("../fonts/Aleo/Aleo-VariableFont_wght.ttf") format("truetype");
@@ -191,7 +219,36 @@
   font-weight: 100 900;
 }
 
-/* ============= BASE STYLES (BODY, MAIN, LAYOUT) ============= */
+/* ================================= */
+/* UTILITY CLASSES */
+/* ================================= */
+
+/* Frequently reused vertical flex layout */
+.u-flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fill-green {
+  background-color: var(--color-accent-2);
+}
+
+.fill-grey {
+  background-color: var(--color-accent-3);
+}
+
+.outline-blue {
+  border-color: var(--color-accent-1);
+}
+
+.outline-green {
+  border-color: var(--color-accent-2);
+}
+
+/* ================================= */
+/* BASE STYLES */
+/* ================================= */
 *,
 *::before,
 *::after {
@@ -202,6 +259,7 @@ body {
   margin: 0;
   padding: 0;
 
+  width: 100%;
   overflow-x: hidden;
 
   background-color: var(--color-background);
@@ -219,7 +277,9 @@ section {
   margin-bottom: var(--space-section);
 }
 
-/* ============= TYPOGRAPHY (HEADINGS, TEXT, LABELS) ============= */
+/* ================================= */
+/* TYPOGRAPHY */
+/* ================================= */
 p,
 a,
 label {
@@ -321,9 +381,9 @@ p {
   }
 }
 
-/* ============= BUTTONS AND INTERACTIVE ELEMENTS ============= */
-
-/* ============= HEADER AND FOOTER ============= */
+/* ================================= */
+/* HEADER & NAVIGATION */
+/* ================================= */
 
 header,
 footer {
@@ -346,37 +406,43 @@ footer {
 }
 
 header {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: fit-content;
+
   padding: var(--space-lrg);
-  position: relative;
 
   border-bottom: var(--border-thick) solid var(--color-accent-2);
 }
 
 /* Theme Toggle Button */
 .header__theme-toggle {
-  background: none;
-  border: var(--border-thin) solid var(--color-accent1-light);
-  cursor: pointer;
   display: flex;
   align-items: center;
   gap: var(--space-2xsm);
-  padding: var(--space-xsm) var(--space-sm);
-  color: var(--text-on-header);
-  font-size: var(--font-lrg);
+
+  margin-right: var(--space-med);
+  padding: var(--space-xsm) var(--space-xsm);
+
+  border: var(--border-med) solid var(--color-accent-1-light);
+  background: none;
+  cursor: pointer;
+
   font-family: var(--font-family-body);
+  font-size: var(--font-lrg);
+  color: var(--text-on-header);
+
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
-  margin-right: var(--space-med);
 }
 
 .header__theme-toggle__icon {
-  font-size: var(--font-lrg);
   display: inline-block;
+  font-size: var(--font-lrg);
 }
 
 .header__theme-toggle__text {
@@ -487,25 +553,27 @@ footer {
   }
 }
 
-/* ============= HOME PAGE ELEMENTS ============= */
+/* ================================= */
+/* HOME PAGE: HERO & INTRODUCTION */
+/* ================================= */
 
 /* Hero Section */
 .hero {
   position: relative;
   z-index: 100;
 
-  background-image: url(../images/index/hero-mobile.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
 
   width: 100vw;
   min-height: var(--hero-height);
 
-  display: flex;
-  justify-content: center;
-
   padding: var(--space-xlrg) var(--space-med);
+
+  background-image: url(../images/index/hero-mobile.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__text {
@@ -596,7 +664,9 @@ footer {
   }
 }
 
-/* Learn More */
+/* ================================= */
+/* HOME PAGE: LEARN MORE SECTION */
+/* ================================= */
 .learn-more {
   display: flex;
   flex-direction: column;
@@ -609,8 +679,8 @@ footer {
 }
 
 .trail-accent {
-  margin-bottom: var(--space-xlrg);
   width: 80%;
+  margin-bottom: var(--space-xlrg);
 }
 
 .learn-more__grid {
@@ -620,13 +690,17 @@ footer {
 }
 
 .learn-more__tile {
+  position: relative;
+
   display: grid;
   grid-template-columns: 80% 20%;
-  border-style: solid;
-  border-width: var(--border-med);
+
+  width: 100%;
   min-height: var(--learn-more__tile-min-height);
 
-  position: relative;
+  border-style: solid;
+  border-width: var(--border-med);
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -640,12 +714,14 @@ footer {
 }
 
 .learn-more__tile__text {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   padding: var(--space-sm);
-  position: relative;
-  z-index: 1;
 
   h3 {
     text-align: left;
@@ -659,11 +735,16 @@ footer {
 }
 
 .learn-more__tile__arrow {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 1;
+}
+
+.learn-more__tile__arrow__icon {
+  color: var(--text-light);
 }
 
 .learn-more__tile--gear {
@@ -708,13 +789,9 @@ footer {
   }
 }
 
-/* ============= GEAR PAGE ELEMENTS ============= */
-.introduction-gear {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* ================================= */
+/* GEAR PAGE */
+/* ================================= */
 .gear-list {
   display: flex;
   flex-direction: column;
@@ -742,6 +819,7 @@ footer {
 
 .gear-list__item__media__image {
   width: 80%;
+
   border-width: var(--border-med);
   border-style: solid;
 }
@@ -765,7 +843,9 @@ footer {
 .gear-list__item__cost__tile {
   display: flex;
   flex-direction: column;
+
   padding: var(--space-med) var(--space-lrg);
+
   background-color: var(--color-accent-3-light);
 
   p {
@@ -776,8 +856,8 @@ footer {
 }
 
 .gear-list__item__price {
-  font-size: var(--font-3xlrg);
   text-align: center;
+  font-size: var(--font-3xlrg);
 }
 
 @media (min-width: 768px) {
@@ -804,13 +884,9 @@ footer {
   }
 }
 
-/* ============= DIFFICULTY PAGE ELEMENTS ============= */
-.introduction-difficulty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* ================================= */
+/* DIFFICULTY PAGE */
+/* ================================= */
 .difficulty-scale {
   display: flex;
   flex-direction: column;
@@ -841,7 +917,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding: var(--space-xsm) var(--space-sm);
+
   background-color: var(--color-accent-1);
 
   h3 {
@@ -855,9 +933,9 @@ footer {
   background-color: var(--color-accent-1-light);
 
   h2 {
-    font-size: var(--font-3xlrg);
     height: fit-content;
     padding: var(--space-2xsm) var(--space-lrg);
+    font-size: var(--font-3xlrg);
     font-weight: 800;
     color: var(--text-light);
   }
@@ -871,6 +949,7 @@ footer {
 
 .difficulty-scale__level__image {
   width: 100%;
+
   border-width: var(--border-med);
   border-style: solid;
 }
@@ -897,7 +976,9 @@ footer {
   }
 }
 
-/* ============= LOCATIONS PAGE ELEMENTS ============= */
+/* ================================= */
+/* LOCATIONS PAGE */
+/* ================================= */
 
 .locations {
   display: flex;
@@ -905,15 +986,10 @@ footer {
   gap: var(--space-section);
 }
 
-.introduction-locations {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .introduction-locations__image {
-  margin-bottom: var(--space-lrg);
   width: 80%;
+  margin-bottom: var(--space-lrg);
+
   border-width: var(--border-thick);
   border-style: solid;
 }
@@ -937,6 +1013,7 @@ footer {
 
 .locations__item__content__image {
   width: 100%;
+
   border-width: var(--border-med);
   border-style: solid;
 }
@@ -967,31 +1044,22 @@ footer {
   }
 }
 
-/* ============= ANECDOTE PAGE ELEMENTS ============= */
+/* ================================= */
+/* ANECDOTE PAGE */
+/* ================================= */
 
 .anecdote {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-xlrg);
-  align-items: center;
-}
-
-.introduction-anecdote {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.anecdote__section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .introduction-anecdote {
   padding-bottom: var(--space-xlrg);
-  border-bottom: var(--border-med) solid var(--color-accent-3-light);
   margin-bottom: var(--space-xlrg);
+
+  border-bottom: var(--border-med) solid var(--color-accent-3-light);
 }
 
 .introduction-anecdote__image,
@@ -1036,33 +1104,9 @@ footer {
   }
 }
 
-/* ============= HELPERS ============= */
-
-.fill-dark-blue {
-  background-color: var(--color-accent-1);
-}
-
-.fill-light-blue {
-  background-color: var(--color-accent-1-light);
-}
-
-.fill-green {
-  background-color: var(--color-accent-2);
-}
-
-.fill-grey {
-  background-color: var(--color-accent-3);
-}
-
-.outline-blue {
-  border-color: var(--color-accent-1);
-}
-
-.outline-green {
-  border-color: var(--color-accent-2);
-}
-
-/* ============= JS STATES ============= */
+/* ================================= */
+/* DARK MODE */
+/* ================================= */
 body.darkmode {
   --color-background: var(--color-dark-grey);
   --text-on-page: var(--color-cool-off-white);
